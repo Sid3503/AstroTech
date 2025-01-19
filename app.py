@@ -185,7 +185,6 @@ def get_details():
         session['astro_details'] = astro_details
         session['extended_details'] = extended_details
         session['navamsa_details'] = navamsa_details
-        session['chart_svg_path'] = chart_svg_path
         session['zodiac_sign'] = zodiac_sign
         session['horoscope'] = horoscope
         session['combined_output'] = combined_output
@@ -197,7 +196,6 @@ def get_details():
             astro_details=astro_details,
             extended_details=extended_details,
             navamsa_details=navamsa_details,
-            chart_svg_path=chart_svg_path,
             combined_output=combined_output,
             zodiac_sign=zodiac_sign,
             horoscope=horoscope,
