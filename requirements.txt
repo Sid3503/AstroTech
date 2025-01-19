@@ -1,11 +1,6 @@
 Flask
 requests
 python-dotenv
-planets
-extended
-navamsa
-img
-zodiac
 markdown
 google-generativeai
 os
