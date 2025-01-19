@@ -1,4 +1,4 @@
-  import requests
+import requests
 import json
 from planets import get_astrological_details
 from extended import get_extended_details
