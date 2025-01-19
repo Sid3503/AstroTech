@@ -7,7 +7,6 @@ from dotenv import load_dotenv
 from planets import get_astrological_details
 from extended import get_extended_details
 from navamsa import get_navamsa_details
-from img import get_horoscope_chart
 from zodiac import get_zodiac_sign, get_horoscope
 import markdown
 from flask import Flask, request, jsonify, render_template, session
@@ -78,22 +77,6 @@ def combine_responses(nakshatra_details, tithi_details, astro_details, extended_
         "Extended Details": extended_details,
         "Navamsa Details": navamsa_details,
     }
-
-def get_horoscope_chart(birth_date, birth_time, location):
-    chart_svg_path = 'images/horoscope_chart.svg'
-
-    with open(chart_svg_path, 'w') as svg_file:
-        svg_content = """
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
-            <rect width="500" height="500" fill="lightblue"/>
-            <text x="250" y="250" font-size="20" text-anchor="middle" fill="black">
-                Horoscope Chart
-            </text>
-        </svg>
-        """
-        svg_file.write(svg_content)
-
-    return chart_svg_path
 
 def convert_nakshatra_to_text(response_text):
     data = json.loads(response_text)
@@ -176,8 +159,6 @@ def get_details():
         astro_details = get_astrological_details(birth_date, birth_time, location)
         extended_details = get_extended_details(birth_date, birth_time, location)
         navamsa_details = get_navamsa_details(birth_date, birth_time, location)
-
-        chart_svg_path = get_horoscope_chart(birth_date, birth_time, location)
 
         birth_day_month = "-".join(birth_date.split('-')[2:0:-1])
         zodiac_sign, zodiac_sign_num = get_zodiac_sign(birth_day_month)
