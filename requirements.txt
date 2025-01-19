@@ -1,6 +1,5 @@
 Flask
 requests
-json
 python-dotenv
 planets
 extended
