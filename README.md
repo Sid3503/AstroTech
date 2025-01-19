@@ -64,8 +64,6 @@ AstroTech features a **context-aware AI chatbot** powered by the **Gemini LLM**:
 
 ---
 
----
-
 ## 🛠️ Getting Started  
 
 ### **Run the Project Locally**  
