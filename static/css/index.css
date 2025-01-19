@@ -1,0 +1,485 @@
+/* Body Styling */
+body {
+    background-color: #121212; /* Dark background for a sleek look */
+    color: #e0e0e0; /* Light text color for contrast */
+    font-family: 'Zen Dots', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Navbar Styling */
+nav.navbar {
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #1f1f1f; /* Darker background for the navbar */
+}
+
+nav.navbar .navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #ffffff; /* White brand color */
+    transition: color 0.3s ease;
+}
+
+nav.navbar .navbar-brand:hover {
+    color: #ffffff; /* Highlight color on hover */
+    transform: scale(1.01);
+}
+
+nav.navbar .navbar-nav .nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ccc; /* Light grey for nav links */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav.navbar .navbar-nav .nav-link:hover {
+    color: #ffffff; /* Accent color on hover */
+    transform: scale(1.01);
+}
+
+.navbar-toggler {
+    border-color: #ffffff; /* Gray color for the toggler */
+}
+
+.navbar-toggler-icon {
+    background-color: #1e1e1e; /* Gray icon for the toggler */
+}
+
+/* Social Icon Styling */
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: white;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icon.linkedin {
+    background-color: #0e76a8; /* LinkedIn blue */
+}
+
+.social-icon.github {
+    background-color: #333; /* GitHub black */
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.social-icon.linkedin:hover {
+    background-color: #0b5c8a;
+}
+
+.social-icon.github:hover {
+    background-color: #1d1d1d;
+}
+
+/* Card Styling */
+.card {
+    max-width: 280px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    background-color: #1e1e1e; /* Dark background for cards */
+    transition: transform 0.6s ease, box-shadow 0.6s ease, color 0.6s ease;
+    color: #aaa; /* Default text color */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+    color: #ffffff; /* Change text color to white */
+}
+
+/* Team Image Styling */
+.card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: -50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.card-body {
+    padding-top: 15px;
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: #ffffff; /* Accent color */
+    border-color: #ffffff;
+    color: #121212; /* Set text color to dark */
+}
+
+.btn-primary:hover {
+    background-color: #121212; /* Darker shade on hover */
+    border-color: #121212;
+    color: #ffffff; /* White text color on hover */
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.fade-in-up:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.fade-in-up:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.fade-in-up:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.fade-in-up:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+/* Features Styling */
+.features {
+    padding: 4rem 0;
+}
+
+.features .icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.features .feature-card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 2rem;
+    transition: transform 0.8s, background-color 0.8s, color 0.8s;
+    color: #e0e0e0; /* Default text color */
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.features .feature-card:hover {
+    transform: translateY(-10px);
+    background-color: #ffffff; /* Accent background color on hover */
+    color: #121212; /* Text color changes to dark on hover */
+}
+
+.features .feature-card:hover .icon {
+    color: #121212; /* Ensure icons also match the hover effect */
+}
+
+/* Media Queries for Responsiveness */
+
+/* For phones (up to 575.98px) */
+@media (max-width: 575.98px) {
+    body {
+        font-size: 14px; /* Smaller base font size for phones */
+    }
+
+    nav.navbar {
+        padding: 0.8rem 1rem;
+    }
+
+    nav.navbar .navbar-brand {
+        font-size: 1.2rem; /* Adjust navbar brand size */
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .card {
+        max-width: 100%; /* Allow cards to take full width */
+        margin-bottom: 1.5rem; /* Add spacing between cards */
+    }
+
+    .features {
+        padding: 2rem 0; /* Reduce padding for small screens */
+    }
+
+    .features .feature-card {
+        padding: 1.5rem;
+    }
+
+    .btn-primary {
+        font-size: 0.9rem; /* Smaller buttons */
+        padding: 10px 16px;
+    }
+
+    .col-md-4 {
+        padding-bottom: 30px;
+    }
+}
+
+/* For medium devices (tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    body {
+        font-size: 15px; /* Slightly larger font size */
+    }
+
+    .features {
+        padding: 3rem 1rem; /* Adjust padding */
+    }
+
+    .features .feature-card {
+        padding: 1.8rem;
+    }
+
+    .card {
+        margin-bottom: 2rem; /* Add spacing between cards */
+    }
+
+    .btn-primary {
+        font-size: 1rem; /* Medium-sized buttons */
+    }
+}
+
+/* For large devices (desktops, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    nav.navbar .navbar-brand {
+        font-size: 1.4rem; /* Larger navbar brand for tablets */
+    }
+
+    .features {
+        padding: 4rem 2rem; /* Restore more generous padding */
+    }
+
+    .features .feature-card {
+        padding: 2rem;
+    }
+
+    .card {
+        max-width: 250px; /* Adjust card size */
+    }
+}
+
+/* For extra-large devices (larger desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    body {
+        font-size: 16px; /* Default font size for large screens */
+    }
+
+    .features {
+        padding: 5rem 3rem; /* Add more padding for extra-large screens */
+    }
+
+    .features .feature-card {
+        padding: 2.5rem;
+    }
+
+    .card {
+        max-width: 300px; /* Larger card size */
+    }
+
+    .btn-primary {
+        font-size: 1.2rem; /* Larger buttons */
+    }
+}
+
+/* Features Section */
+#features {
+    padding: 4rem 0;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+#features h2 {
+    color: #ffffff;
+    margin-bottom: 2rem;
+}
+
+/* Feature Card Styling */
+.feature-card {
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    padding: 2rem;
+    color: #e0e0e0;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    background-color: #ffffff; /* Change to white on hover */
+    color: #121212; /* Text color changes to dark */
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.feature-card .icon {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.feature-card:hover .icon {
+    color: #121212; /* Icon color changes on hover */
+}
+
+.feature-card .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card .card-text {
+    font-size: 1rem;
+    color: #d0d0d0;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+    .feature-card {
+        margin-bottom: 1.5rem; /* Space between feature cards on small screens */
+    }
+}
+
+/* Add a margin between navbar and hero section */
+header {
+    margin-top: 60px; /* Adjust based on the height of your navbar */
+    animation: fadeIn 1s ease-out; /* Animation for hero section */
+}
+
+
+/* Animation for Navbar */
+@keyframes fadeInNavbar {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation for Hero Section */
+@keyframes fadeInHero {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation to navbar */
+.navbar {
+    animation: fadeInNavbar 1s ease-out;
+}
+
+/* Apply animation to hero section */
+header {
+    animation: fadeInHero 1s ease-out;
+}
+
+.animate-form {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Input field hover effect */
+input.form-control:hover {
+    background-color: #e2e2e2;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover scale effect */
+button:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.animate-header {
+    opacity: 0;
+    animation: fadeInHeader 1.5s forwards ease-in-out;
+    animation-delay: 0.2s; /* Delay the header's appearance */
+}
+
+@keyframes fadeInHeader {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-header span {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards ease-in-out;
+}
+
+/* Delay for each word */
+.word-1 {
+    animation-delay: 0.2s;
+}
+
+.word-2 {
+    animation-delay: 0.4s;
+}
+
+.word-3 {
+    animation-delay: 0.6s;
+}
+
+.word-4 {
+    animation-delay: 0.8s;
+}
+
+/* Paragraph Animation */
+.animate-paragraph {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards ease-in-out;
+    animation-delay: 1.5s;
+}
+
+/* Fade-in-up animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Color for important words */
+.important {
+    color: #f0e68c; /* Khaki */
+}
